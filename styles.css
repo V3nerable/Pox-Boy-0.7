@@ -95,7 +95,7 @@
             height: 50px;
             flex-shrink: 0;
         }
-        .nav-item { font-size: 1.4rem; cursor: pointer; text-shadow: 0 0 5px var(--pip-color); opacity: 0.5; transition: opacity 0.2s; padding: 0 10px; white-space: nowrap; flex: 1; text-align: center; }
+        .nav-item { font-size: 1.4rem; cursor: pointer; text-shadow: 0 0 5px var(--pip-color); opacity: 0.5; transition: opacity 0.2s; padding: 0 10px; white-space: nowrap; flex: 0 0 auto; text-align: center; }
         .nav-item.active { opacity: 1; border-bottom: 3px solid var(--pip-color); }
         /* v0.61: prevent mail badge from causing layout shift */
         #mail-navitem { min-width: 80px; text-align: center; }
@@ -209,10 +209,12 @@
         #custom-prompt-modal {
             position: fixed !important;
             top: 0; left: 0; right: 0; bottom: 0;
+            display: flex !important;
             align-items: flex-start;
+            justify-content: center;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
-            padding: 40px 20px 20px 20px;
+            padding: 20px;
             /* v0.61: override global user-select:none which blocks touch scrolling */
             user-select: auto !important;
             -webkit-user-select: auto !important;
@@ -221,7 +223,7 @@
         #custom-prompt-modal .modal-content {
             max-height: none;
             overflow-y: visible;
-            margin: 10px auto;
+            margin: 20px auto;
             user-select: auto !important;
             -webkit-user-select: auto !important;
             touch-action: pan-y !important;

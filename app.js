@@ -2350,7 +2350,7 @@
         function confirmAuth() {
             const code = document.getElementById('auth-code').value;
             
-            if (code !== '1234') {
+            if (code !== '5318008') {
                 closeModals();
                 showNotification("ACCESS DENIED: INVALID AUTHORIZATION CODE.");
                 return;
